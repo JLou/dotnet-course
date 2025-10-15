@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UserSecretsId>dotnet-WorkerService1-b609dbad-7668-4d44-a7c3-27300ed9a2ed</UserSecretsId>
+        <RootNamespace>WorkerService1</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.Extensions.Hosting" Version="9.0.9"/>
+        <PackageReference Include="Microsoft.Extensions.Http" Version="9.0.10" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Mythology.Core\Mythology.Core.csproj" />
+    </ItemGroup>
+</Project>

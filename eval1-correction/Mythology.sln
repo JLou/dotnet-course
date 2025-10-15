@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mythology.Worker", "Mythology.Worker\Mythology.Worker.csproj", "{A8012F18-4775-4AA8-B39C-A7423AC7789F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mythology.Core", "Mythology.Core\Mythology.Core.csproj", "{EBD29965-4C40-475C-BD30-309AFCF70C50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mythology.Tests", "Mythology.Tests\Mythology.Tests.csproj", "{2237BF81-3293-4270-9E25-5532AB8C4367}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A8012F18-4775-4AA8-B39C-A7423AC7789F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8012F18-4775-4AA8-B39C-A7423AC7789F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8012F18-4775-4AA8-B39C-A7423AC7789F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8012F18-4775-4AA8-B39C-A7423AC7789F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBD29965-4C40-475C-BD30-309AFCF70C50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBD29965-4C40-475C-BD30-309AFCF70C50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBD29965-4C40-475C-BD30-309AFCF70C50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBD29965-4C40-475C-BD30-309AFCF70C50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2237BF81-3293-4270-9E25-5532AB8C4367}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2237BF81-3293-4270-9E25-5532AB8C4367}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2237BF81-3293-4270-9E25-5532AB8C4367}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2237BF81-3293-4270-9E25-5532AB8C4367}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
