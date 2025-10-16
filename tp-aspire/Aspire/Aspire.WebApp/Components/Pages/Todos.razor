@@ -1,0 +1,42 @@
+﻿@page "/todos"
+@using Aspire.WebApp.Clients
+@inject ITodoClient httpClient
+
+<h3>Todos</h3>
+
+@if (todos == null)
+{
+    <p>Loading ...</p>
+}
+else
+{
+    <ul>
+        @foreach (var todo in todos)
+        {
+            <li>@todo.Value</li>
+        }
+    </ul>
+}
+
+<AddTodoItem OnTodoAdded="OnTodoAddedHandler"></AddTodoItem>
+
+@code {
+    private List<TodoItem>? todos = null;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadTodos();
+    }
+
+    private async Task LoadTodos()
+    {
+        todos = await httpClient.GetTodoItemsAsync();
+        StateHasChanged();
+    }
+
+    private async Task OnTodoAddedHandler()
+    {
+        await LoadTodos();
+    }
+
+}

@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <Sdk Name="Aspire.AppHost.Sdk" Version="9.5.0" />
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsAspireHost>true</IsAspireHost>
+    <UserSecretsId>a6c592a0-4da6-4088-a362-7c5e9492f3ba</UserSecretsId>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Aspire.Hosting.AppHost" Version="9.5.0" />
+    <PackageReference Include="Aspire.Hosting.Keycloak" Version="9.5.1-preview.1.25502.11" />
+    <PackageReference Include="Aspire.Hosting.Redis" Version="9.5.0" />
+    <PackageReference Include="Aspire.Hosting.SqlServer" Version="9.5.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Aspire.ApiService\Aspire.ApiService.csproj" />
+    <ProjectReference Include="..\Aspire.WebApp\Aspire.WebApp.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Realms\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Realms\myapp.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>

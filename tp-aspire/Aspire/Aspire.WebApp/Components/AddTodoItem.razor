@@ -1,0 +1,73 @@
+﻿@using Aspire.WebApp.Clients
+@inject ITodoClient Client
+
+<EditForm EditContext="editContext" OnValidSubmit="Submit" FormName="add-todo-item-form">
+    @* <AntiforgeryToken /> *@
+    <h4>Add a new todo</h4>
+    <div class="mb-3">
+        <label for="todoItem" class="form-label">Value</label>
+        <InputText type="text" class="form-control" id="todoItem" placeholder="Enter todo item"
+                   @bind-Value="Model!.Title" required/>
+    </div>
+
+    <div>
+        <ValidationMessage For="() => Model!.Title"/>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Add Value</button>
+</EditForm>
+
+@code {
+    [SupplyParameterFromForm] private TodoFormItem? Model { get; set; }
+
+    private EditContext? editContext;
+    private ValidationMessageStore? messageStore;
+
+    [Parameter] public EventCallback OnTodoAdded { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Model ??= new TodoFormItem();
+        editContext = new EditContext(Model);
+        editContext.OnValidationRequested += HandleValidationRequested;
+        messageStore = new ValidationMessageStore(editContext);
+    }
+
+    private void HandleValidationRequested(object? sender,
+        ValidationRequestedEventArgs args)
+    {
+        messageStore?.Clear();
+
+        // Custom validation logic
+        if (string.IsNullOrWhiteSpace(Model!.Title))
+        {
+            messageStore?.Add(() => Model.Title, "Value is required.");
+        }
+
+        if (Model.Title.Length > 100)
+        {
+            messageStore?.Add(() => Model.Title, "Value cannot exceed 100 characters.");
+        }
+    }
+
+
+    private async Task Submit()
+    {
+        if (Model is not null)
+        {
+            await Client.CreateTodoItemAsync(new TodoItem()
+            {
+                Id = 0,
+                Value = Model.Title,
+            });
+            await OnTodoAdded.InvokeAsync();
+            Model = new TodoFormItem(); // reset le formulaire
+        }
+    }
+
+    public class TodoFormItem
+    {
+        public string Title { get; set; } = string.Empty;
+    }
+
+}

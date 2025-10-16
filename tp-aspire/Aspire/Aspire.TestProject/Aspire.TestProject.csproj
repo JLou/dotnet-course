@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <IsPackable>false</IsPackable>
+        <IsTestProject>true</IsTestProject>
+    </PropertyGroup>
+
+
+    <ItemGroup>
+        <PackageReference Include="Aspire.Hosting.Testing" Version="9.5.0"/>
+        <PackageReference Include="TUnit" Version="0.61.39"/>
+    </ItemGroup>
+
+
+    <ItemGroup>
+        <ProjectReference Include="..\Aspire.AppHost\Aspire.AppHost.csproj"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Using Include="System.Net"/>
+        <Using Include="Microsoft.Extensions.DependencyInjection"/>
+        <Using Include="Aspire.Hosting.ApplicationModel"/>
+        <Using Include="Aspire.Hosting.Testing"/>
+    </ItemGroup>
+
+</Project>
