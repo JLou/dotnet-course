@@ -779,6 +779,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             NameClaimType = "name",
             RoleClaimType = "role",
         };
+        options.MapInboundClaims = false;
     });
 
 builder.Services.AddAuthorization();
