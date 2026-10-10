@@ -1,0 +1,6 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/FestivalPlanner.Cli/FestivalPlanner.Cli.csproj" />
+    <Project Path="src/FestivalPlanner/FestivalPlanner.csproj" />
+  </Folder>
+</Solution>

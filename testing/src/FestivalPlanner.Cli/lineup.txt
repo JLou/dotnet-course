@@ -1,0 +1,14 @@
+# Chroma Festival 2026 — Saturday lineup
+# stage;artist;start;end
+Mainstage;Sunset Protocol;18:00;19:00
+Mainstage;Neon Harbour;19:30;20:45
+Mainstage;Volta;21:15;22:30
+Mainstage;Kaleido;23:00;00:30
+Warehouse;Static Bloom;18:30;19:30
+Warehouse;Mirror Dept;20:00;21:00
+Warehouse;Blunt Theory;21:30;23:00
+Warehouse;Deep Signal;23:30;01:00
+Greenhouse;Lea Morvan;19:00;20:00
+Greenhouse;Oiseau Bleu;20:30;21:45
+Greenhouse;Nocturne Club;22:15;23:45
+Greenhouse;Aube;00:15;02:00

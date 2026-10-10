@@ -68,10 +68,11 @@ Demonstrate a small, repeatable command sequence:
 
 ```text
 dotnet new console -n CourseDemo
-dotnet sln CourseDemo.sln add CourseDemo/CourseDemo.csproj
-dotnet build CourseDemo.sln
+dotnet new sln -n CourseDemo
+dotnet sln CourseDemo.slnx add CourseDemo/CourseDemo.csproj
+dotnet build CourseDemo.slnx
 dotnet run --project CourseDemo/CourseDemo.csproj
-dotnet test CourseDemo.sln
+dotnet test CourseDemo.slnx
 ```
 
 Adjust solution-file creation syntax to the installed SDK's supported templates/CLI conventions. Explain:

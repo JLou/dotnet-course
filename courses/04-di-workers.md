@@ -34,6 +34,7 @@ Students should be able to:
 - Trace the composition root in a .NET host: services are registered during startup and resolved by the host/container.
 - Prefer constructor injection for required dependencies. Avoid service locator patterns that resolve arbitrary dependencies inside business logic.
 - Discuss that DI improves replaceability and testability but is not a goal by itself; avoid gratuitous abstraction.
+- This is the natural place to pick up the test doubles deferred from Session 2: an injected dependency *is* a test seam. Distinguish a fake (a working lightweight implementation), a stub (canned responses) and a mock (asserting that a call happened), and show one of them replacing a real boundary such as a clock or a remote client in a TUnit test.
 
 ### Registrations and lifetimes — 35 min
 

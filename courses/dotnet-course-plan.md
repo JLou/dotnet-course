@@ -26,20 +26,28 @@
 | 15 min | Introduce the pair project and discuss possible topics |
 | **180 min** | **Total** |
 
-### Session 2 — .NET development workflow and unit testing
+### Session 2 — Hands-on testing with TUnit, collections, and LINQ
 
-**Learning goals:** Apply familiar programming skills in the .NET toolchain, create a test project, and use .NET testing conventions and tools effectively. No time is spent teaching OOP fundamentals.
+**Learning goals:** Create a test project from scratch, write basic and parameterized tests with TUnit, run them from the CLI, then review .NET collections and practise the standard LINQ operators on a kata. Most of the session is spent writing code.
 
 | Time | Activity |
 |---:|---|
-| 15 min | .NET/C# idioms and setup check; identify differences from languages students already know |
-| 30 min | Project and package references, restore/build/test workflow, and useful CLI commands |
+| 10 min | Testing in .NET: test projects, runners, and TUnit |
+| 30 min | Guided demo: run the app, create the test project, add the reference, run and filter tests, write basic and parameterized tests |
+| 45 min | Hands-on: students write their own tests for the provided Festival Planner library |
+| 5 min | Testing debrief |
 | 10 min | Break |
-| 45 min | Test-project setup, assertions, test organization, and parameterized tests |
-| 30 min | Test seams and test doubles; practice testing code that uses dependencies |
-| 30 min | Run tests and diagnose failures with the IDE/CLI; inspect coverage or analyzer feedback |
-| 20 min | Pair-project scope and initial requirements |
+| 15 min | Collections in .NET: arrays, `List<T>`, `Dictionary`, `HashSet`, and the sequence interfaces |
+| 10 min | LINQ operator tour and first look at deferred execution |
+| 40 min | LINQ kata: implement the kata methods until the provided test suite is green |
+| 10 min | Kata debrief and bridge to Session 3 |
+| 5 min | Pair project: form pairs and assign the scope statement |
 | **180 min** | **Total** |
+
+Workshop material: [`testing/`](../testing) — the Festival Planner, a runnable console demo plus a
+library with no tests — and the
+[LINQ katas](https://programmingheadache.com/2024/08/04/unlocking-linq-basic-katas-for-c-programmers/).
+Test doubles and test seams are deferred to Session 4, where dependency injection makes them natural.
 
 ### Session 3 — LINQ, iterators, and coding test 1
 
@@ -132,7 +140,7 @@
 ## Pair-project milestones
 
 - **Session 1:** Introduce the project and brainstorm topics.
-- **Session 2:** Choose a scope, identify initial requirements, and form pairs.
+- **Session 2:** Form pairs; the scope statement and initial requirements are prepared as homework.
 - **Session 4:** Review the design and identify dependencies and background-work needs.
 - **Session 5:** Demonstrate a working API slice.
 - **Session 6:** Add persistent data access with EF Core.
@@ -144,7 +152,7 @@ Students can develop the project between class meetings during the trimester; th
 ## Detailed instructor notes
 
 - [Session 1 — .NET basics, history, and tooling](./01-basics.md)
-- [Session 2 — .NET workflow and unit testing](./02-workflow-testing.md)
+- [Session 2 — Hands-on testing with TUnit, collections, and LINQ](./02-workflow-testing.md)
 - [Session 3 — LINQ, iterators, and coding test 1](./03-linq-iterators.md)
 - [Session 4 — Dependency injection, IoC, and workers](./04-di-workers.md)
 - [Session 5 — ASP.NET Core APIs](./05-aspnet-core.md)
