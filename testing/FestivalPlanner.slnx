@@ -3,4 +3,7 @@
     <Project Path="src/FestivalPlanner.Cli/FestivalPlanner.Cli.csproj" />
     <Project Path="src/FestivalPlanner/FestivalPlanner.csproj" />
   </Folder>
+  <Folder Name="/tests/">
+    <Project Path="solution/FestivalPlanner.Tests/FestivalPlanner.Tests.csproj" />
+  </Folder>
 </Solution>
