@@ -1,0 +1,9 @@
+{
+  "Votes": [
+    { "Choices": ["Alice", "Bilal", "Chloé"] },
+    { "Choices": ["Alice", "Chloé", "Bilal"] },
+    { "Choices": ["Bilal", "Chloé", "Alice"] },
+    { "Choices": ["Chloé", "Bilal", "Alice"] },
+    { "Choices": ["Chloé", "Alice", "Bilal"] }
+  ]
+}
